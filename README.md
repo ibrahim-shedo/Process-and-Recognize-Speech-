@@ -17,6 +17,22 @@ You can install the necessary packages using pip:
 
 ```bash
 pip install tensorflow librosa numpy matplotlib
+If you encounter the error:
+
+vbnet
+Copy
+Edit
+ModuleNotFoundError: No module named 'librosa'
+It means that the librosa library is not installed on your system. To fix this, ensure you have installed it using the following:
+
+bash
+Copy
+Edit
+pip install librosa
+Alternatively, if you prefer to use a different audio processing library, you can modify the code. For example, you can replace the librosa import with your preferred library and adjust the audio preprocessing steps accordingly.
+
+Also, replace the audio_file path with the correct location of the sound file you want to use. The code assumes that the file is in .wav format and will be resampled to 16kHz.
+
 Files
 speech_recognition.py: The main Python script that processes audio data, builds the model, and trains the model on labeled speech data.
 
@@ -94,7 +110,3 @@ Acknowledgments
 The model uses the librosa library for audio processing and feature extraction.
 
 The neural network is built with tensorflow and keras.
-
-vbnet
-Copy
-Edit
